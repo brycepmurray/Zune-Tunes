@@ -6,7 +6,7 @@ var bjectId = mongoose.SchemaTypes.ObjectId
 var schema = new mongoose.Schema({
     title: { type: String, require: true },
     list: { type: Array },
-    userId: { type: ObjectId, ref: models.user.userId, require: true }
+    userId: { type: ObjectId, ref: models.user.userId }
 })
 
 
