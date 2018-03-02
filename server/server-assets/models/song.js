@@ -6,7 +6,7 @@ var schema = newmongoose.Schema({
     albumnArt: { type: String, required: true },
     artist: { type: String },
     albumn: { type: String },
-    price: { type: Number },
+    albumnPice: { type: Number, required: true },
     upvotes: { type: Number, required: true, default: 0 }
 });
 
