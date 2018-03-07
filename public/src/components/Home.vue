@@ -4,6 +4,7 @@
       <div class="col-sm-12 text-center">
         <h1>Zune Tunes</h1>
       </div>
+
     </div>
     <!-- YOU WILL PROBABLY END UP WITH SOMETHING LIKE THIS -->
     <itunes class="itunes"></itunes>
@@ -24,6 +25,11 @@
         components: {
             Itunes,
             MyTunes
+        },
+        methods: {
+            getMyTunes() {
+                this.$store.dispatch('getMyTunes')
+            }
         }
     }
 </script>

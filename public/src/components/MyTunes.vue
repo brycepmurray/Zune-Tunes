@@ -7,6 +7,7 @@
                 </div>
                 <div class="row" v-for="song in songs">
                     <div class="col-md-6">
+                        <img :src="song.artworkUrl100">
                         <h4>Title:{{song.title}}</h4>
                         <h5>Artist: {{song.artist}}</h5>
                         <audio controls style="width: 100%">
