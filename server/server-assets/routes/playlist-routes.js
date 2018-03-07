@@ -1,6 +1,6 @@
 var Songs = require('../models/song')
-var Playlists = require('../models/playlist')
 var router = require('express').Router()
+var Playlists = require('../models/playlist')
 
 // save for later when have more user functionality
 
