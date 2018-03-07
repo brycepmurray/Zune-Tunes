@@ -8,12 +8,12 @@
             </div>
             <div class="row">
                 <div class="col-md-6" v-for="myTune in myTunes">
-                        <img :src="song.artworkUrl100">
+                        <img :src="myTune.artworkUrl100">
                         <h4>Title:{{myTune.title}}</h4>
                         <h5>Artist: {myTune.artist}}</h5>
-                        <audio controls style="width: 100%">
-                            <source :src="song.preview">
-                            </audio>
+                        <audio controls style="width:100%">
+                                <source :src="myTune.previewUrl">
+                                </audio>
                             <button @click="remove(song._id)" type="button" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-trash"></span>
                             </button>
