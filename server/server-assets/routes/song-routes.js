@@ -1,5 +1,5 @@
 var router = require('express').Router()
-var Songs = require('..models/Song')
+var Songs = require('..models/song')
 
 
 router.post('/mytunes/playlist', (req, res, next) => {
