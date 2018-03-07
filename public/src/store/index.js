@@ -17,6 +17,17 @@ var store = new vuex.Store({
     mutations: {
         setResults(state, results) {
             state.results = results
+        },
+
+        setMyTunes(state, results) {
+            results.sort(function(a, b) {
+                return b.vote - a.vote
+            })
+            state.MyTunes = results
+        },
+
+        addMyTunes(state, results) {
+            state.myTunes.push(results)
         }
     },
     actions: {
