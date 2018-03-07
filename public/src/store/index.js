@@ -1,6 +1,11 @@
 import vue from 'vue'
 import vuex from 'vuex'
+import axios from 'axios'
 import $ from 'jquery'
+
+var api = axios.create({
+    baseURL = '//localhost:3000/mytunes/'
+})
 
 vue.use(vuex)
 
