@@ -24,7 +24,7 @@ var Playlists = require('../models/playlist')
 //             })
 //     }),
 
-router.get('/mytunes/playlist', (req, res, next) => {
+router.get('mytunes/playlist', (req, res, next) => {
     Playlist.find()
         .then(playlist => {
             res.send(playlist)
