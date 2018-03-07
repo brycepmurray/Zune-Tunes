@@ -26,6 +26,8 @@ router.put('/mytunes/playlist/songs/:id', (req, res, next) => {
         .catch(next)
 })
 
+module.exports = { router }
+
 
 // router.post('/songs', (req, res, next) => {
 //         Songs.create(req.body)
