@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 console.log('Be sure to put in your connection string!')
-var connectionString = 'mongodb://music@admin:TestMusic@ds048719.mlab.com:48719/vue-music';
+var connectionString = 'mongodb://brycepmurray:usa1Holly@ds048719.mlab.com:48719/musicstore';
 
 var connection = mongoose.connection;
 mongoose.connect(connectionString);
