@@ -1,3 +1,4 @@
+var router = require('express').Router()
 var Songs = require('..models/Song')
 
 router.post('/songs', (req, res, next) => {
