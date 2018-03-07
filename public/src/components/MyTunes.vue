@@ -1,24 +1,26 @@
 <template>
     <div class="my-tunes">
+        <div class="container-fluid">
             <div class="row">
-                    <div class="col-md-4">
-                        <h3>My Playlist</h3>
-                    </div>
+                <div class="col-md-4">
+                    <h3>My Playlist</h3>
                 </div>
-                <div class="row">
-                    <div class="col-md-6" v-for="myTune in myTunes">
+            </div>
+            <div class="row">
+                <div class="col-md-6" v-for="myTune in myTunes">
                         <img :src="song.artworkUrl100">
-                        <h4>Title:{{song.title}}</h4>
-                        <h5>Artist: {{song.artist}}</h5>
+                        <h4>Title:{{myTune.title}}</h4>
+                        <h5>Artist: {myTune.artist}}</h5>
                         <audio controls style="width: 100%">
-                                <source :src="song.preview">
+                            <source :src="song.preview">
                             </audio>
                             <button @click="remove(song._id)" type="button" class="btn btn-primary">
-                                    <span class="glyphicon glyphicon-trash"></span>
-                                </button>
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-    </div>
+            </div>
 </template>
 
 <script>

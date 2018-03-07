@@ -38,15 +38,15 @@
 <style scoped>
     .my-tunes {
         display: inline-block;
-        min-height: 500px;
-        min-width: 50%;
+        min-height: 100vh;
+        width: 48vw;
         background: green;
     }
     
     .itunes {
         display: inline-block;
         background: red;
-        min-height: 500px;
-        max-width: 45%;
+        min-height: 100vh;
+        width: 49vw;
     }
 </style>
