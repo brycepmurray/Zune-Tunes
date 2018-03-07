@@ -5,8 +5,8 @@
                         <h3>My Playlist</h3>
                     </div>
                 </div>
-                <div class="row" v-for="song in songs">
-                    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6" v-for="myTune in myTunes">
                         <img :src="song.artworkUrl100">
                         <h4>Title:{{song.title}}</h4>
                         <h5>Artist: {{song.artist}}</h5>
@@ -29,17 +29,29 @@
 
             }
         },
+        computed: {
+            myTunes() {
+                return this.$store.state.myTunes
+            }
+        },
         mounted() {
             this.$store.dispatch('getMyTunes')
         },
         methods: {
             delete(song) {
                 this.$store.dispatch('removeTrack', song)
+            },
+            upVote(MyTune) {
+                this.$store.dispatch('upVote', myTune)
+            },
+            downVote(MyTune) {
+                this.$store.dispatch('downVote', myTune)
             }
+
         }
     }
 </script>
 
-<style>
+<style scoped>
 
 </style>

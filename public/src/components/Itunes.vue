@@ -9,9 +9,9 @@
                         </form>
                     </div>
                 </div>
-                <div class="row" v-for="song in songs">
-                    <div class="col-md-4">
-                        <img :src="song.artworkUrl100">
+                <div class="row cards">
+                        <div class="col-md-5 card text-center justify-center" v-for="song in songs">
+                        <img class="resize" :src="song.artworkUrl100">
                         <h4>Title: {{song.trackName}}</h4>
                         <h5>Artist: {{song.artistName}}</h5>
                         <audio controls style="width:100%">
@@ -48,6 +48,21 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+    .card {
+        background-color: aliceblue;
+        box-shadow: 6px 6px 5px rgba(56, 56, 56, 0.7);
+        min-width: 17%;
+        margin-bottom: 2rem
+    }
+    
+    .cards {
+        justify-content: space-around
+    }
+    
+    .resize {
+        width: 80%;
+        padding-left: 4rem;
+        margin-bottom: 1rem
+    }
 </style>

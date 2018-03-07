@@ -35,7 +35,7 @@
 </script>
 
 
-<style>
+<style scoped>
     .my-tunes {
         display: inline-block;
         min-height: 500px;
@@ -47,6 +47,6 @@
         display: inline-block;
         background: red;
         min-height: 500px;
-        min-width: 45%;
+        max-width: 45%;
     }
 </style>
